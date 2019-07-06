@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    class Program
+    public interface QuakeBehavior
     {
-        static void Main(string[] args)
-        {
-        }
+        void quake();
     }
 }
