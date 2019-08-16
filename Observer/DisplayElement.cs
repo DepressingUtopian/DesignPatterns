@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns
+namespace Observer
 {
-    public interface FlyBehavior
+    public interface DisplayElement
     {
-      void fly();
+        void display();
     }
-
 }
-
