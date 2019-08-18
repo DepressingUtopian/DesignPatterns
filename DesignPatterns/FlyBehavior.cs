@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns
+namespace Strategy
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface FlyBehavior
     {
       void fly();

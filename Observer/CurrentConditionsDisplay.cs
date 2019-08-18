@@ -32,6 +32,12 @@ namespace Observer
         {
             this.weatherData.removeObserver(this);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="temperature"></param>
+        /// <param name="humidity"></param>
+        /// <param name="pressure"></param>
         public void update(float temperature, float humidity, float pressure)
         {
             this.temperature = temperature;
