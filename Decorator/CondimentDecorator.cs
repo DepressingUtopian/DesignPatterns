@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Decorator
 {
+
+    /// <summary>
+    /// Абстрвктый класс для реализации декораторов
+    /// </summary>
     public abstract class CondimentDecorator : Baverage
     {
+        // Переменная для хранения ссылки
         protected Baverage baverage;
 
         public CondimentDecorator(Baverage baverage,String description) : base(description)

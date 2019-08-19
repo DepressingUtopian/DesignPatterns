@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Decorator
 {
+
+    /// <summary>
+    /// Абстрактный класс компонента.
+    /// </summary>
     public abstract class Baverage
     {
+        //Описание по умолчанию
         public String description = "Simple Baverage";
 
         public Baverage(string description)

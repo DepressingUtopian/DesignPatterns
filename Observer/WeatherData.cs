@@ -9,7 +9,9 @@ namespace Observer
 {
     public class WeatherData : Subject
     {
+        //Список наблюдателей
         private ArrayList observers;
+
         private float temperature;
         private float humidity;
         private float preassure;
@@ -30,7 +32,7 @@ namespace Observer
                 observers.RemoveAt(i);
             }
         }
-        public void notifyObserver()
+        public void notifyObservers()
         {
             for (int i = 0; i < observers.Count; i++)
             {
@@ -38,10 +40,21 @@ namespace Observer
                 observer.update(temperature, humidity, preassure);
             }
         }
+
+        /// <summary>
+        /// Оповещение об изменениях
+        /// </summary>
         public void measurementsChanged()
         {
-            notifyObserver();
+            notifyObservers();
         }
+
+        /// <summary>
+        /// Присвоение новых данных
+        /// </summary>
+        /// <param name="temperature">Температура</param>
+        /// <param name="humidity">Влажность</param>
+        /// <param name="preassure">Давление</param>
         public void setMeasurements(float temperature,float humidity,float preassure)
         {
             this.temperature = temperature;
@@ -49,6 +62,13 @@ namespace Observer
             this.preassure = preassure;
             measurementsChanged();
         }
+
+        /// <summary>
+        ///Вычисление теплового индекса
+        /// </summary>
+        /// <param name="t">Температура</param>
+        /// <param name="rh">Влажность</param>
+        /// <returns>Тепловой индекс</returns>
         public float computeHeatIndex(float t, float rh)
         {
             float index = (float)((16.923 + (0.185212 * t) + (5.37941 * rh) - (0.100254 * t * rh) +

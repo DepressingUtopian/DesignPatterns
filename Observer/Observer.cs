@@ -8,7 +8,13 @@ namespace Observer
 {
     public interface Observer
     {
-        void update(float temp, float humidity,float pressure);
+        /// <summary>
+        /// Обновление данных наблюдателя
+        /// </summary>
+        /// <param name="temperature">Температура</param>
+        /// <param name="humidity">Влажность</param>
+        /// <param name="pressure">Давление</param>
+        void update(float temperature, float humidity,float pressure);
         void remove();
     }
 }

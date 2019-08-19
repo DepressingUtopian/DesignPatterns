@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public interface FlyBehavior
     {
       void fly();

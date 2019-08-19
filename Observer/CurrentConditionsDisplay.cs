@@ -16,6 +16,10 @@ namespace Observer
 
         }
 
+        /// <summary>
+        /// Делегация и регистрация нового слушателя субъекта
+        /// </summary>
+        /// <param name="weatherData">Классы которые реалируют интерфейс Subject</param>
         public CurrentConditionsDisplay(Subject weatherData)
         {
             this.weatherData = weatherData;
@@ -33,7 +37,7 @@ namespace Observer
             this.weatherData.removeObserver(this);
         }
         /// <summary>
-        /// 
+        /// Обновление данных рассылки
         /// </summary>
         /// <param name="temperature"></param>
         /// <param name="humidity"></param>

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Decorator
 {
+    /// <summary>
+    /// Главный класс программы
+    /// Служит для проверки работоспособности классов
+    /// </summary>
     class Coffee
     {
         static void Main(string[] args)

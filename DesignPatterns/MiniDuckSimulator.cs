@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
+
+    /// <summary>
+    /// Главный класс программы
+    /// Служит для проверки работоспособности классов
+    /// </summary>
     class MiniDuckSimulator
     {
         static void Main(string[] args)
@@ -16,7 +21,8 @@ namespace Strategy
 
             Duck model = new MallardDuck();
             model.performFly();
-            model.setFlyBehavior(new FlyRocketPowered());
+            //Динамическое изменение объекта 
+            model.setFlyBehavior(new FlyRocketPowered()); 
             model.performFly();
            
         }
